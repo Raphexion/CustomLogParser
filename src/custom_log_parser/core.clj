@@ -4,7 +4,7 @@
   (:require [clojure.xml :as xml])
   (:gen-class))
 
-;; Only construct on SimpleDateFormat. Hide it from other uses.
+;; Only construct one SimpleDateFormat. Hide it from other uses.
 (let [log-date-format (SimpleDateFormat. "yyyy-MM-dd HH:mm:ss,S")]
   (defn parse-date
   "Assuming that the string follows a given format,
